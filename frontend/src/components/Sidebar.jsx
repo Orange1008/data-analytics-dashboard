@@ -35,7 +35,7 @@ const Sidebar = () => {
                     <div className="bg-blue-500 rounded-lg p-1.5 flex items-center justify-center">
                         <Box size={18} className="text-white fill-white" />
                     </div>
-                    <span className="font-bold text-base tracking-wide">Orbicular</span>
+                    <span className="font-bold text-base tracking-wide">DataDash</span>
                 </div>
             </div>
 
