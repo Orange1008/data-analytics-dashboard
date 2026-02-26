@@ -2,6 +2,10 @@
 
 A full-stack data analytics dashboard built to visualize sample business data including revenue, sales, and profits across categories over time.
 
+🔗 Live Demo: https://data-analytics-dashboard-red.vercel.app
+
+🔗 GitHub Repository: https://github.com/Orange1008/data-analytics-dashboard
+
 ## Project Overview
 
 This project consists of:
