@@ -1,7 +1,7 @@
 import { useAuth } from '../context/AuthContext';
 import { LogOut, User, Calendar, Filter, ChevronDown, Menu } from 'lucide-react';
 
-const Navbar = ({ filters, setFilters }) => {
+const Navbar = ({ filters, setFilters, toggleSidebar }) => {
     const { user, logout } = useAuth();
 
     return (
@@ -10,7 +10,7 @@ const Navbar = ({ filters, setFilters }) => {
                 <div className="flex justify-between items-center h-16">
                     {/* Left side: Logo & Mobile Menu */}
                     <div className="flex items-center gap-4">
-                        <button className="md:hidden text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
+                        <button onClick={toggleSidebar} className="md:hidden text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
                             <Menu size={24} />
                         </button>
                         <div className="flex items-center gap-2 cursor-pointer">

@@ -13,6 +13,7 @@ const Dashboard = () => {
     const [error, setError] = useState('');
     const [filters, setFilters] = useState({ category: '', status: '', startDate: '', endDate: '' });
     const [activeTab, setActiveTab] = useState('Overview');
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -73,13 +74,13 @@ const Dashboard = () => {
 
     return (
         <div className="h-screen bg-gray-50 dark:bg-[#0f1115] flex overflow-hidden transition-colors duration-300">
-            {/* Sidebar (Desktop) */}
-            <Sidebar />
+            {/* Sidebar */}
+            <Sidebar isOpen={isSidebarOpen} setIsOpen={setIsSidebarOpen} />
 
             {/* Main Content Area */}
-            <div className="flex-1 flex flex-col min-w-0">
+            <div className="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative">
                 {/* Top Navbar */}
-                <Navbar filters={filters} setFilters={setFilters} />
+                <Navbar filters={filters} setFilters={setFilters} toggleSidebar={() => setIsSidebarOpen(true)} />
 
                 {/* Dashboard Content */}
                 <main className="flex-1 p-6 md:p-10 overflow-y-auto">
