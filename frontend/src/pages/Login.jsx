@@ -23,7 +23,7 @@ const Login = () => {
                 password,
             });
             login(data);
-            navigate('/');
+            navigate('/dashboard');
         } catch (err) {
             setError(err.response?.data?.message || 'Invalid email or password.');
         } finally {
@@ -35,43 +35,46 @@ const Login = () => {
         <div className="min-h-screen bg-white flex">
             {/* Left Side: Fluid Wave Graphic */}
             <div
-                className="hidden lg:flex w-1/2 relative bg-cover bg-center rounded-r-3xl overflow-hidden"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop')" }}
+                className="hidden lg:flex w-1/2 relative bg-[#0a0a0c] overflow-hidden"
             >
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a0f] via-transparent to-transparent opacity-80"></div>
+                {/* Simulated Data Points / Grid Background */}
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+                {/* Glowing Orbs for that modern analytics feel */}
+                <div className="absolute top-1/4 -right-1/4 w-[500px] h-[500px] bg-blue-600/30 rounded-full blur-[120px] mix-blend-screen"></div>
+                <div className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-indigo-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
 
                 <div className="absolute top-10 left-12 flex items-center gap-4 text-white">
-                    <span className="text-[10px] font-bold tracking-widest uppercase opacity-70">A Wise Quote</span>
-                    <div className="h-px w-10 bg-white/30"></div>
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-blue-400">Secure Access</span>
+                    <div className="h-px w-10 bg-blue-500/50"></div>
                 </div>
 
                 <div className="relative z-10 flex flex-col justify-end p-16 pb-24 h-full">
-                    <h1 className="text-6xl font-serif text-white leading-tight mb-6">
-                        Get<br />
-                        Everything<br />
-                        You Want
+                    <h1 className="text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight">
+                        Insights<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Unleashed</span>
                     </h1>
-                    <p className="text-gray-300 text-sm max-w-sm opacity-80 leading-relaxed font-light">
-                        You can get everything you want if you work hard, trust the process, and stick to the plan.
+                    <p className="text-gray-400 text-base max-w-sm font-light leading-relaxed">
+                        Log back in to view your live performance metrics, track real-time audience behavior, and accelerate your growth.
                     </p>
                 </div>
             </div>
 
             {/* Right Side: Clean Form */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 xl:px-32 py-12 relative">
-                {/* Global Logo */}
                 <div className="absolute top-10 left-0 right-0 lg:right-auto lg:left-0 flex justify-center w-full">
-                    <div className="flex items-center gap-2 text-gray-500">
-                        <Layers size={18} className="stroke-[2.5]" />
-                        <span className="font-semibold text-sm tracking-tight text-[#1f2937]">Cogie</span>
-                    </div>
+                    <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div className="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                            <Layers size={16} className="text-white" />
+                        </div>
+                        <span className="font-bold text-lg tracking-tight text-[#1f2937]">DataDash</span>
+                    </Link>
                 </div>
 
                 <div className="w-full max-w-md mx-auto mt-12">
                     <div className="mb-10 text-center">
-                        <h2 className="text-3xl font-serif text-[#1f2937] tracking-tight mb-2">Welcome Back</h2>
-                        <p className="text-sm text-gray-400 font-light">Enter your email and password to access your account</p>
+                        <h2 className="text-3xl font-bold tracking-tight text-[#1f2937] mb-2">Welcome Back</h2>
+                        <p className="text-sm text-gray-500 font-medium">Continue to your DataDash workspace</p>
                     </div>
 
                     <form className="space-y-5" onSubmit={handleSubmit}>

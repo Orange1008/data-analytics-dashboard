@@ -41,7 +41,7 @@ const Register = () => {
                 password,
             });
             login(data);
-            navigate('/');
+            navigate('/dashboard');
         } catch (err) {
             setError(err.response?.data?.message || 'Failed to create account.');
         } finally {
@@ -53,25 +53,31 @@ const Register = () => {
         <div className="min-h-screen bg-white flex">
             {/* Left Side: Graphic Element */}
             <div
-                className="hidden lg:flex w-1/2 relative bg-cover bg-center rounded-r-3xl overflow-hidden"
-                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2564&auto=format&fit=crop')" }}
+                className="hidden lg:flex w-1/2 relative bg-[#0a0a0c] overflow-hidden"
             >
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c0a0f] via-transparent to-transparent opacity-60"></div>
+                {/* Simulated Data Points / Grid Background */}
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+
+                {/* Glowing Orbs */}
+                <div className="absolute top-1/3 -left-1/4 w-[600px] h-[600px] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
+                <div className="absolute bottom-1/4 -right-1/4 w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px] mix-blend-screen"></div>
 
                 <div className="absolute top-10 left-12 flex items-center gap-4 text-white">
-                    <span className="text-[10px] font-bold tracking-widest uppercase opacity-70">A Wise Quote</span>
-                    <div className="h-px w-10 bg-white/30"></div>
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-purple-400">Join The Future</span>
+                    <div className="h-px w-10 bg-purple-500/50"></div>
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-end p-16 pb-24 h-full w-full">
-                    <div className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-2xl max-w-md">
-                        <h1 className="text-4xl font-serif text-white leading-tight mb-4">
-                            Start<br />
-                            For Free
+                <div className="relative z-10 flex flex-col justify-end p-16 pb-24 h-full w-full opacity-90">
+                    <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-[2rem] max-w-md shadow-2xl relative overflow-hidden">
+                        {/* Decorative glow inside card */}
+                        <div className="absolute -top-1/2 -left-1/2 shadow-[0_0_100px_rgba(168,85,247,0.4)] blur-3xl rounded-full w-full h-full pointer-events-none"></div>
+
+                        <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 tracking-tight relative z-10">
+                            Accelerate<br />
+                            Your Growth
                         </h1>
-                        <p className="text-gray-200 text-sm opacity-90 leading-relaxed font-light">
-                            Join thousands of data-driven teams. Experience exactly what we have to offer without complex pricing upfront.
+                        <p className="text-gray-300 text-sm opacity-90 leading-relaxed font-light relative z-10">
+                            Join thousands of data-driven teams using DataDash. Connect your sources, visualize metrics instantly, and identify expansion opportunities.
                         </p>
                     </div>
                 </div>
@@ -79,18 +85,19 @@ const Register = () => {
 
             {/* Right Side: Clean Form */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 sm:px-16 xl:px-32 py-12 relative overflow-y-auto">
-                {/* Global Logo */}
                 <div className="absolute top-10 left-0 right-0 lg:right-auto lg:left-0 flex justify-center w-full">
-                    <div className="flex items-center gap-2 text-gray-500">
-                        <Layers size={18} className="stroke-[2.5]" />
-                        <span className="font-semibold text-sm tracking-tight text-[#1f2937]">Cogie</span>
-                    </div>
+                    <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                        <div className="w-8 h-8 flex items-center justify-center bg-blue-600 rounded-lg shadow-lg shadow-blue-500/20">
+                            <Layers size={16} className="text-white" />
+                        </div>
+                        <span className="font-bold text-lg tracking-tight text-[#1f2937]">DataDash</span>
+                    </Link>
                 </div>
 
                 <div className="w-full max-w-md mx-auto mt-12">
                     <div className="mb-10 text-center">
-                        <h2 className="text-3xl font-serif text-[#1f2937] tracking-tight mb-2">Create an account</h2>
-                        <p className="text-sm text-gray-400 font-light">Enter your info below to get started</p>
+                        <h2 className="text-3xl font-bold tracking-tight text-[#1f2937] mb-2">Create an account</h2>
+                        <p className="text-sm text-gray-500 font-medium">Start building your custom dashboard</p>
                     </div>
 
                     <form className="space-y-5" onSubmit={handleSubmit}>
