@@ -67,4 +67,18 @@ This project consists of:
 3. Start the dev server `npm run dev` (Application will run at http://localhost:5173)
 
 ### Dashboard Screenshots
-*(Add screenshots of your dashboard views here by dragging and dropping them from your browser after you run the frontend.)*
+Landing page
+<img width="1810" height="879" alt="image" src="https://github.com/user-attachments/assets/333e5467-eea3-4d78-a18c-bfa01953bed3" />
+Signup Page
+<img width="1827" height="848" alt="image" src="https://github.com/user-attachments/assets/2679fdfe-613b-486b-8b59-581e86711342" />
+Signin Page
+<img width="1839" height="821" alt="image" src="https://github.com/user-attachments/assets/ad886576-b867-49ee-879a-b1a89abdc4a5" />
+DashBoard
+(Light mode)
+<img width="1731" height="800" alt="image" src="https://github.com/user-attachments/assets/e038c7ab-5d57-43e4-ac3a-6851fe9dab83" />
+(Dark mode)
+<img width="1731" height="800" alt="image" src="https://github.com/user-attachments/assets/07d9e15d-f0cf-48a8-bec1-6633ad068229" />
+
+
+
+
