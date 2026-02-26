@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://data-analytics-dashboard-1z8g.onrender.com/api',
 });
 
 api.interceptors.request.use((config) => {
