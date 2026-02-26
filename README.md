@@ -78,6 +78,8 @@ DashBoard
 <img width="1731" height="800" alt="image" src="https://github.com/user-attachments/assets/e038c7ab-5d57-43e4-ac3a-6851fe9dab83" />
 (Dark mode)
 <img width="1731" height="800" alt="image" src="https://github.com/user-attachments/assets/07d9e15d-f0cf-48a8-bec1-6633ad068229" />
+(Small Screen)
+<img width="687" height="848" alt="image" src="https://github.com/user-attachments/assets/99e61d6c-aac6-464c-bb78-1ea33c2e5d7f" />
 
 
 
